@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 
 app.use(express.json());
 
-app.use(express.static(__dirname + "/client/dist/pizzaClient"));
+app.use(express.static(path.join(__dirname, "client/dist/pizzaClient")));
 
 app.use("/api/food", foodRouter);
 app.get("/*", (req, res) =>

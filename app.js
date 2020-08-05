@@ -33,6 +33,8 @@ app.use(express.static(__dirname + "/client/dist/pizzaClient"));
 
 app.use("/api/food", foodRouter);
 app.get("/*", (req, res) =>
-    res.sendFile(path.join(__dirname + "/client/dist/pizzaClient/index.html"))
+    res.sendFile(
+        path.join(__dirname, "client", "dist", "pizzaClient", "index.html")
+    )
 );
 module.exports = app;

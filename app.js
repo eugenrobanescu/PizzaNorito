@@ -29,10 +29,10 @@ app.use(function (req, res, next) {
 
 app.use(express.json());
 
-app.use(express.static(path.join("client/dist/pizzaClient")));
+app.use(express.static(path.join("client2/dist/pizzaClient")));
 
 app.use("/api/food", foodRouter);
 app.get("/*", (req, res) =>
-    res.sendFile(path.join("client/dist/pizzaClient/index.html"))
+    res.sendFile(path.join("client2/dist/pizzaClient/index.html"))
 );
 module.exports = app;
